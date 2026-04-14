@@ -2,26 +2,26 @@ import Application from "../models/Application.js";
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 
 const buildS3Url = (key) => {
-  return `https://${process.env.AWS_S3_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${key}`;
+  return `https://${process.env.MY_AWS_S3_BUCKET_NAME}.s3.${process.env.MY_AWS_REGION}.amazonaws.com/${key}`;
 };
 
 const getS3Client = () => {
-  if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY || !process.env.AWS_REGION) {
+  if (!process.env.MY_AWS_ACCESS_KEY_ID || !process.env.MY_AWS_SECRET_ACCESS_KEY || !process.env.MY_AWS_REGION) {
     throw new Error("S3 credentials are missing. Check AWS environment variables.");
   }
 
   return new S3Client({
-    region: process.env.AWS_REGION,
+    region: process.env.MY_AWS_REGION,
     credentials: {
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      accessKeyId: process.env.MY_AWS_ACCESS_KEY_ID,
+      secretAccessKey: process.env.MY_AWS_SECRET_ACCESS_KEY,
     },
   });
 };
 
 const uploadToS3 = async (file, folder = "applications") => {
   // Validate env vars before attempting upload
-  if (!process.env.AWS_S3_BUCKET_NAME || !process.env.AWS_REGION) {
+  if (!process.env.MY_AWS_S3_BUCKET_NAME || !process.env.MY_AWS_REGION) {
     throw new Error("S3 configuration is missing. Check AWS environment variables.");
   }
 
@@ -35,7 +35,7 @@ const uploadToS3 = async (file, folder = "applications") => {
 
   const s3 = getS3Client();
   const command = new PutObjectCommand({
-    Bucket: process.env.AWS_S3_BUCKET_NAME,
+    Bucket: process.env.MY_AWS_S3_BUCKET_NAME,
     Key: key,
     Body: file.buffer,
     ContentType: file.mimetype,
