@@ -9,7 +9,7 @@ const AdminApplications = () => {
   useEffect(() => {
     const fetchApplications = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/applications/admin/all");
+        const res = await fetch("https://eliashib.vercel.app/api/applications/admin/all");
         const data = await res.json();
 
         if (!res.ok) {

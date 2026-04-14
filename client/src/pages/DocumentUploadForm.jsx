@@ -70,7 +70,7 @@ const DocumentUploadForm = () => {
   payload.append("acceptConsent", formData.acceptConsent);
 
   try {
-    const res = await fetch(`http://localhost:5000/api/applications/${applicationId}/documents`, {
+    const res = await fetch(`https://eliashib.vercel.app/api/applications/${applicationId}/documents`, {
       method: "POST",
       body: payload,
     });

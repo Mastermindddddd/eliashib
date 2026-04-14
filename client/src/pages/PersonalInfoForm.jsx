@@ -46,7 +46,7 @@ const PersonalInfoForm = () => {
   e.preventDefault();
 
   try {
-    const res = await fetch("http://localhost:5000/api/applications/personal-info", {
+    const res = await fetch("https://eliashib.vercel.app/api/applications/personal-info", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
