@@ -1,5 +1,5 @@
 import React from "react";
-import HeroBg from "/hero.jpg";
+import HeroBg from "/hero.webp";
 
 const Hero = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import AboutImg from "/aboutUs.png"; // your image WITH the lines inside
+import AboutImg from "/aboutUs.webp";
 
 const AboutUs = () => {
   return (
