@@ -21,7 +21,7 @@ const AboutUs = () => {
           </div>
 
           {/* Right Content */}
-          <div className="text-white max-w-[560px]">
+          <div className="text-white max-w-[560px] pb-16">
             <h2 className="font-poppins text-3xl sm:text-4xl lg:text-4xl font-extrabold uppercase leading-tight tracking-tight">
               Recognised. Accredited.
               <br />

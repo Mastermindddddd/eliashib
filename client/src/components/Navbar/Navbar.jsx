@@ -17,12 +17,20 @@ const mobileMenu = [
   { id: 4, name: "Contact", link: "/contact-support" },
 ];
 
+const serviceDropdownItems = [
+  { id: 1, name: "Artisans & Technical Trades", link: "/services#artisans-technical-trades" },
+  { id: 2, name: "IT & Data Science", link: "/services#it-data-science" },
+  { id: 3, name: "Mining", link: "/services#mining" },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const handleScroll = (event, targetId) => {
     event.preventDefault();
     setIsOpen(false);
+    setIsServicesOpen(false);
 
     if (!targetId.startsWith("#")) {
       window.location.href = targetId;
@@ -45,7 +53,6 @@ const Navbar = () => {
     <header className="navbar fixed top-0 left-0 w-full z-50 bg-black">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 pt-5 pb-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <a href="/" className="shrink-0" data-aos="fade-down" data-aos-once="true">
             <img
               src={Logo}
@@ -54,7 +61,7 @@ const Navbar = () => {
             />
           </a>
 
-          {/* Desktop Floating Pill Navbar */}
+          {/* Desktop Navbar */}
           <div className="hidden md:flex items-center">
             <div
               className="relative flex items-center gap-3 lg:gap-5 px-5 lg:px-6 py-3 rounded-[18px] bg-[#0b1118]/90 backdrop-blur-md"
@@ -68,17 +75,61 @@ const Navbar = () => {
                   "0 0 0 1px rgba(255,255,255,0.04), 0 10px 35px rgba(0,0,0,0.35), inset 0 0 18px rgba(255,255,255,0.03)",
               }}
             >
-              {desktopMenu.map((menu) => (
-                <a
-                  key={menu.id}
-                  href={menu.link}
-                  onClick={(e) => handleScroll(e, menu.link)}
-                  className="text-white/90 text-sm lg:text-[14px] font-medium px-3 py-2 rounded-full transition duration-300 hover:text-white inline-flex items-center gap-2"
-                >
-                  {menu.name}
-                  {menu.hasDropdown && <FaChevronDown className="text-[10px] opacity-80" />}
-                </a>
-              ))}
+              {desktopMenu.map((menu) => {
+                if (menu.hasDropdown) {
+                  return (
+                    <div
+                      key={menu.id}
+                      className="relative"
+                      onMouseEnter={() => setIsServicesOpen(true)}
+                      onMouseLeave={() => setIsServicesOpen(false)}
+                    >
+                      <a
+                        href={menu.link}
+                        onClick={(e) => handleScroll(e, menu.link)}
+                        className="text-white/90 text-sm lg:text-[14px] font-medium px-3 py-2 rounded-full transition duration-300 hover:text-white inline-flex items-center gap-2"
+                      >
+                        {menu.name}
+                        <FaChevronDown
+                          className={`text-[10px] opacity-80 transition-transform duration-300 ${
+                            isServicesOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </a>
+
+                      {isServicesOpen && (
+                        <div className="absolute left-0 top-full pt-3 z-50">
+                          <div className="w-[350px] rounded-[14px] border border-white/60 bg-black shadow-[0_10px_30px_rgba(0,0,0,0.45)] overflow-hidden">
+                            
+
+                            {serviceDropdownItems.map((item) => (
+                              <a
+                                key={item.id}
+                                href={item.link}
+                                onClick={(e) => handleScroll(e, item.link)}
+                                className="block px-6 py-4 text-white text-[15px] border-t border-white/10 hover:bg-white/5 transition duration-200"
+                              >
+                                {item.name}
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
+                return (
+                  <a
+                    key={menu.id}
+                    href={menu.link}
+                    onClick={(e) => handleScroll(e, menu.link)}
+                    className="text-white/90 text-sm lg:text-[14px] font-medium px-3 py-2 rounded-full transition duration-300 hover:text-white inline-flex items-center gap-2"
+                  >
+                    {menu.name}
+                  </a>
+                );
+              })}
 
               <a
                 href="/apply"
@@ -127,7 +178,6 @@ const Navbar = () => {
           </div>
         )}
       </div>
-
     </header>
   );
 };
