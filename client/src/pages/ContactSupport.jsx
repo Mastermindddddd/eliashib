@@ -64,7 +64,7 @@ const ContactSupportPage = () => {
       {/* Contact card */}
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-14 py-16 sm:py-18 lg:py-20">
         <div className="bg-[#efefef] rounded-[4px] px-6 sm:px-8 lg:px-10 py-7 sm:py-8 lg:py-9">
-          <div className="grid lg:grid-cols-[1.02fr_0.98fr] gap-10 lg:gap-10 items-start">
+          <div className="grid lg:grid-cols-[1.02fr_0.98fr] gap-10 lg:gap-10 items-stretch">
             {/* Left side */}
             <div className="text-black">
               <h2 className="text-[1.6rem] sm:text-[1.85rem] font-extrabold">
@@ -184,15 +184,14 @@ const ContactSupportPage = () => {
             </div>
 
             {/* Right side map */}
-            {/* Right side map */}
-<div className="w-full h-full flex justify-center lg:justify-end">
-  <div className="overflow-hidden rounded-[4px] w-full max-w-[320px] sm:max-w-[340px] lg:max-w-[400px] h-[420px] lg:h-[455px] border border-black/10 bg-[#d9d9d9]">
+            <div className="w-full flex justify-center lg:justify-end">
+  <div className="overflow-hidden rounded-[4px] w-full max-w-[320px] sm:max-w-[340px] lg:max-w-[400px] h-full border border-black/10 bg-[#d9d9d9]">
     <img
-      src={MapImage}
-      alt="Location Map"
-      className="w-full h-full object-cover object-center block"
-      loading="lazy"
-    />
+  src={MapImage}
+  alt="Location Map"
+  className="w-full h-full object-cover object-center block"
+  loading="lazy"
+/>
   </div>
 </div>
           </div>
