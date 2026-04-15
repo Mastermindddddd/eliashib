@@ -18,7 +18,7 @@ const Hero = () => {
 
       <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 pb-14 sm:pb-20 lg:pb-24 pt-32 sm:pt-36">
         <div className="max-w-[780px] mt-20">
-          <h1 className="text-white font-extrabold leading-[1.08] tracking-[-0.02em] text-[2.3rem] sm:text-[3rem] md:text-[3.8rem]">
+          <h1 className="font-poppins text-white font-extrabold leading-[1.08] tracking-[-0.02em] text-[2.3rem] sm:text-[3rem] md:text-[3.8rem]">
             Empowering Africa
             <br />
             Through Digital, Artisanal

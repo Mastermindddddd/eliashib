@@ -56,7 +56,7 @@ const Services = () => {
           <div className="flex items-center justify-center gap-4 sm:gap-5">
   <div className="h-[1px] w-[110px] sm:w-[130px] md:w-[150px] bg-white/40" />
 
-  <h2 className="text-[2rem] sm:text-[2.3rem] lg:text-[2.45rem] font-extrabold tracking-[-0.03em] leading-none">
+  <h2 className="text-[2rem] sm:text-[2.3rem] lg:text-[2.45rem] font-poppins font-extrabold tracking-[-0.03em] leading-none">
     Designed for Your Success
   </h2>
 
@@ -89,7 +89,7 @@ const Services = () => {
         <div className="text-center mt-28 sm:mt-32 lg:mt-36">
           <div className="flex items-center justify-center gap-3 sm:gap-4">
             <div className="h-[1px] w-[110px] sm:w-[130px] md:w-[150px] bg-white/40" />
-            <h2 className="text-[2rem] sm:text-[2.35rem] lg:text-[2.45rem] font-extrabold uppercase tracking-[-0.03em] leading-none">
+            <h2 className="text-[2rem] sm:text-[2.35rem] lg:text-[2.45rem] font-poppins font-extrabold uppercase tracking-[-0.03em] leading-none">
               Our Training Ecosystem
             </h2>
             <div className="h-[1px] w-[110px] sm:w-[130px] md:w-[150px] bg-white/40" />

@@ -48,7 +48,7 @@ const ContactSupportPage = () => {
         <div className="text-center">
           <div className="flex items-center justify-center gap-4 sm:gap-6">
             <div className="h-px w-[80px] sm:w-[110px] bg-white/20" />
-            <h1 className="text-[2rem] sm:text-[2.4rem] lg:text-[2.9rem] font-extrabold uppercase tracking-[-0.02em]">
+            <h1 className="text-[2rem] sm:text-[2.4rem] lg:text-[2.9rem] font-poppins font-extrabold uppercase tracking-[-0.02em]">
               Contact &amp; Support
             </h1>
             <div className="h-px w-[80px] sm:w-[110px] bg-white/20" />
@@ -62,7 +62,7 @@ const ContactSupportPage = () => {
       </div>
 
       {/* Contact card */}
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-14 py-14 sm:py-16">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-14 py-16 sm:py-18 lg:py-20">
         <div className="bg-[#efefef] rounded-[4px] px-6 sm:px-8 lg:px-10 py-7 sm:py-8 lg:py-9">
           <div className="grid lg:grid-cols-[1.02fr_0.98fr] gap-10 lg:gap-10 items-start">
             {/* Left side */}
@@ -75,7 +75,10 @@ const ContactSupportPage = () => {
                 Tell us about yourself and we will be in touch shortly
               </p>
 
-              <form onSubmit={handleSubmit} className="mt-7 space-y-4">
+             <form
+  onSubmit={handleSubmit}
+  className="mt-7 space-y-4 max-w-[520px]"
+>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <input
                     type="text"
@@ -118,42 +121,43 @@ const ContactSupportPage = () => {
                   className="w-full h-[46px] rounded-[4px] border border-black/20 bg-transparent px-4 text-[13px] outline-none placeholder:text-black/35 focus:border-black/40"
                 />
 
-                <div className="pt-2">
+                <div className="pt-4 flex justify-center">
                   <button
-                    type="submit"
-                    className="h-[42px] min-w-[170px] rounded-[4px] bg-gradient-to-r from-fuchsia-900 to-fuchsia-700 text-white text-[12px] font-semibold shadow-md transition duration-300 hover:opacity-95"
-                  >
-                    Contact Us
-                  </button>
+  type="submit"
+  className="h-[42px] min-w-[180px] px-6 rounded-[4px] bg-gradient-to-r from-fuchsia-900 to-fuchsia-700 text-white text-[12px] font-semibold shadow-md transition duration-300 hover:opacity-95"
+>
+  Contact Us
+</button>
                 </div>
               </form>
 
               {/* Bottom contact info */}
-              <div className="mt-10 grid sm:grid-cols-3 gap-8 text-black items-center">
-  
+              <div className="mt-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between text-black">
   {/* CALL */}
-  <div className="flex items-center gap-4">
+  <div className="flex items-center gap-3 min-w-[170px]">
     <img
       src={PhoneIcon}
       alt="Phone"
-      className="w-[36px] h-[36px] object-contain"
+      className="w-[38px] h-[38px] object-contain shrink-0"
     />
-    <p className="text-[15px] font-semibold">
-      (+01) 158 4346
+    <p className="text-[12px] font-semibold tracking-[-0.01em]">
+      (+010) 023 6588
     </p>
   </div>
 
   {/* LOCATION */}
-  <div className="flex items-center gap-4">
+  <div className="flex items-start gap-3 min-w-[320px] max-w-[360px]">
     <img
       src={LocationIcon}
       alt="Location"
-      className="w-[36px] h-[36px] object-contain"
+      className="w-[38px] h-[38px] object-contain shrink-0 mt-[2px]"
     />
-    <div>
-      <p className="text-[14px] font-bold">Location</p>
-      <p className="text-[13px] text-black/80 leading-tight">
-        Cnr Northumberland & Felstead Avenue,<br />
+    <div className="leading-none">
+      <p className="text-[12px] font-extrabold tracking-[-0.01em]">
+        Location
+      </p>
+      <p className="mt-[4px] text-[10px] font-bold leading-[1.35] tracking-[-0.01em]">
+        Cnr Northumberland &amp; Felstead Avenue,<br />
         Fancourt Office Park, Building 3, 1st Floor,<br />
         North Riding, 2188
       </p>
@@ -161,20 +165,21 @@ const ContactSupportPage = () => {
   </div>
 
   {/* EMAIL */}
-  <div className="flex items-center gap-4">
+  <div className="flex items-center gap-3 min-w-[220px]">
     <img
       src={EmailIcon}
       alt="Email"
-      className="w-[36px] h-[36px] object-contain"
+      className="w-[38px] h-[38px] object-contain shrink-0"
     />
-    <div>
-      <p className="text-[14px] font-bold">Email</p>
-      <p className="text-[13px] text-black/80">
+    <div className="leading-none">
+      <p className="text-[12px] font-extrabold tracking-[-0.01em]">
+        Email
+      </p>
+      <p className="mt-[4px] text-[10px] font-bold leading-[1.2] tracking-[-0.01em]">
         Stanley@eliashibgroup.com
       </p>
     </div>
   </div>
-
 </div>
             </div>
 

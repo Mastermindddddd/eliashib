@@ -22,7 +22,7 @@ const IndustrialTraining = () => {
         <div className="text-center">
           <div className="flex items-center justify-center gap-5">
             <div className="h-px w-[110px] bg-white/30" />
-            <h2 className="text-[2rem] sm:text-[2.4rem] lg:text-[2.8rem] font-extrabold tracking-[-0.02em]">
+            <h2 className="text-[2rem] sm:text-[2.4rem] lg:text-[2.8rem] font-poppiins font-extrabold tracking-[-0.02em]">
               All industrial programs include:
             </h2>
             <div className="h-px w-[110px] bg-white/30" />

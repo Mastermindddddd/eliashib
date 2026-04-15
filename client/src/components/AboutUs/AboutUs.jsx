@@ -22,7 +22,7 @@ const AboutUs = () => {
 
           {/* Right Content */}
           <div className="text-white max-w-[560px]">
-            <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold uppercase leading-tight tracking-tight">
+            <h2 className="font-poppins text-3xl sm:text-4xl lg:text-4xl font-extrabold uppercase leading-tight tracking-tight">
               Recognised. Accredited.
               <br />
               Industry-Aligned.

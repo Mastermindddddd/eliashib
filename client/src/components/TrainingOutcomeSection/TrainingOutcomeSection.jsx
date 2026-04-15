@@ -28,7 +28,7 @@ const TrainingOutcomeSection = () => {
           <div className="flex items-center justify-center gap-4 sm:gap-5">
             <div className="h-px w-[74px] sm:w-[92px] md:w-[108px] bg-white/30" />
 
-            <h3 className="text-[2rem] sm:text-[2.35rem] lg:text-[2.75rem] font-extrabold leading-[1.12] tracking-[-0.03em]">
+            <h3 className="text-[2rem] sm:text-[2.35rem] lg:text-[2.75rem]font-poppins font-extrabold leading-[1.12] tracking-[-0.03em]">
               From Training to Employment.
               <br />
               From Skills to Opportunity.

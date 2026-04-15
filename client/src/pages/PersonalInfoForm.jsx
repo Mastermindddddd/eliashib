@@ -78,7 +78,7 @@ const PersonalInfoForm = () => {
         <form onSubmit={handleSubmit} className="max-w-[560px] mt-40">
           {/* Basic personal information */}
           <div className="mb-12">
-            <h2 className="text-[30px] font-normal mb-8">Basic personal information</h2>
+            <h2 className="text-[30px] font-poppins mb-8">Basic personal information</h2>
 
             <div className="space-y-4">
               <div>

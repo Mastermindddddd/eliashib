@@ -28,7 +28,7 @@ const WhyChooseAcademy = () => {
             {/* Right content */}
             <div className="flex items-center md:items-center h-full">
               <div className="max-w-[470px] md:pl-2 lg:pl-4">
-                <h2 className="text-[2.2rem] sm:text-[2.4rem] lg:text-[2.8rem] leading-[1.08] font-extrabold uppercase tracking-[-0.03em]">
+                <h2 className="text-[2.2rem] sm:text-[2.4rem] lg:text-[2.8rem] leading-[1.08] font-poppins font-extrabold uppercase tracking-[-0.03em]">
                   Why Choose
                   <br />
                   Eliashib Academy

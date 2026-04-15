@@ -20,7 +20,7 @@ const ServicesPage = () => {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-14">
           <div className="flex items-center justify-center gap-4 sm:gap-6">
             <div className="h-px w-14 sm:w-24 bg-white/30" />
-            <h1 className="text-center text-2xl sm:text-3xl lg:text-[42px] font-extrabold uppercase leading-tight">
+            <h1 className="text-center text-2xl sm:text-3xl lg:text-[42px] font-poppins font-extrabold uppercase leading-tight">
               Courses Page
               <br />
               (Updated With Credibility)
