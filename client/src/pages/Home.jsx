@@ -10,10 +10,10 @@ const Home = () => {
     <div>
       <Navbar />
       <Hero />
-      <section id="about" className="pt-18">
+      <section id="about">
         <AboutUs />
       </section>
-      <section id="services" className="lg:-mt-20 xl:-mt-36 relative z-10">
+      <section id="services" className="relative z-10 lg:-mt-20 xl:-mt-36">
         <Services />
       </section>
       <section id="contact" className="pt-18">
@@ -22,6 +22,5 @@ const Home = () => {
     </div>
   );
 };
-
 
 export default Home;

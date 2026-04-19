@@ -26,6 +26,7 @@ const serviceDropdownItems = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   const handleScroll = (event, targetId) => {
     event.preventDefault();
@@ -154,17 +155,54 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden mt-4 rounded-2xl border border-white/10 bg-[#0b1118]/95 backdrop-blur-xl shadow-xl px-5 py-5">
             <ul className="flex flex-col gap-2">
-              {mobileMenu.map((menu) => (
-                <li key={menu.id}>
-                  <a
-                    href={menu.link}
-                    onClick={(e) => handleScroll(e, menu.link)}
-                    className="block text-white/90 py-3 px-2 text-base"
-                  >
-                    {menu.name}
-                  </a>
-                </li>
-              ))}
+              {mobileMenu.map((menu) => {
+  if (menu.name === "Services") {
+    return (
+      <li key={menu.id}>
+        {/* Services Toggle */}
+        <button
+          onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+          className="w-full flex items-center justify-between text-white/90 py-3 px-2 text-base"
+        >
+          {menu.name}
+          <FaChevronDown
+            className={`text-[12px] transition-transform duration-300 ${
+              isMobileServicesOpen ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+
+        {/* Dropdown */}
+        {isMobileServicesOpen && (
+          <div className="pl-4 mt-1 flex flex-col">
+            {serviceDropdownItems.map((item) => (
+              <a
+                key={item.id}
+                href={item.link}
+                onClick={(e) => handleScroll(e, item.link)}
+                className="text-white/80 py-2 text-sm border-l border-white/10 pl-3 hover:text-white"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+        )}
+      </li>
+    );
+  }
+
+  return (
+    <li key={menu.id}>
+      <a
+        href={menu.link}
+        onClick={(e) => handleScroll(e, menu.link)}
+        className="block text-white/90 py-3 px-2 text-base"
+      >
+        {menu.name}
+      </a>
+    </li>
+  );
+})}
               <li className="pt-2">
                 <a
                   href="/apply"

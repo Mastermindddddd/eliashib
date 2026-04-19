@@ -1,12 +1,14 @@
 import React from "react";
-
 // top small icons
 import QualificationIcon from "/Icon-Bg.png";
 import WorkplaceIcon from "/IconBg-1.png";
 import PathwayIcon from "/IconBg-2.png";
-
-// one full bottom cards image
+// one full bottom cards image (large screens)
 import TrainingCardsImage from "/training-cards.png";
+// individual cards (small screens)
+import Card1 from "/card1.jpeg";
+import Card2 from "/card2.jpeg";
+import Card3 from "/card3.jpeg";
 
 const topFeatures = [
   {
@@ -32,7 +34,7 @@ const Services = () => {
       id="services"
       className="relative overflow-hidden bg-black text-white px-6 md:px-10 lg:px-16 pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-28"
     >
-      {/* Top-left purple background like screenshot */}
+      {/* Top-left purple background */}
       <div className="pointer-events-none absolute inset-0">
         <div
           className="absolute -top-20 -left-24 h-[480px] w-[1020px] rounded-full blur-3xl"
@@ -45,7 +47,7 @@ const Services = () => {
           className="absolute top-0 left-0 w-full h-[220px]"
           style={{
             background:
-              "linear-gradient(180deg, rgba(128,0,170,0.55) 0%, rgba(78,0,122,0.32)45%, rgba(0,0,0,0) 100%)",
+              "linear-gradient(180deg, rgba(128,0,170,0.55) 0%, rgba(78,0,122,0.32) 45%, rgba(0,0,0,0) 100%)",
           }}
         />
       </div>
@@ -54,15 +56,12 @@ const Services = () => {
         {/* Top heading */}
         <div className="text-center">
           <div className="flex items-center justify-center gap-4 sm:gap-5">
-  <div className="h-[1px] w-[110px] sm:w-[130px] md:w-[150px] bg-white/40" />
-
-  <h2 className="text-[2rem] sm:text-[2.3rem] lg:text-[2.45rem] font-poppins font-extrabold tracking-[-0.03em] leading-none">
-    Designed for Your Success
-  </h2>
-
-  <div className="h-[1px] w-[110px] sm:w-[130px] md:w-[150px] bg-white/40" />
-</div>
-
+            <div className="h-[1px] w-[110px] sm:w-[130px] md:w-[150px] bg-white/40" />
+            <h2 className="text-[2rem] sm:text-[2.3rem] lg:text-[2.45rem] font-poppins font-extrabold tracking-[-0.03em] leading-none">
+              Designed for Your Success
+            </h2>
+            <div className="h-[1px] w-[110px] sm:w-[130px] md:w-[150px] bg-white/40" />
+          </div>
           <p className="mt-4 text-[0.95rem] sm:text-[1rem] text-white/72">
             This ensures that our learners receive:
           </p>
@@ -94,19 +93,40 @@ const Services = () => {
             </h2>
             <div className="h-[1px] w-[110px] sm:w-[130px] md:w-[150px] bg-white/40" />
           </div>
-
           <p className="mt-4 text-[0.95rem] sm:text-[1rem] text-white/72">
             We provide three integrated skill pathways:
           </p>
         </div>
 
-        {/* One full cards image */}
-        <div className="mt-12 sm:mt-14 flex justify-center">
+        {/* Large screen: one combined image */}
+        <div className="hidden lg:flex mt-12 sm:mt-14 justify-center">
           <img
             src={TrainingCardsImage}
             alt="Our Training Ecosystem"
             loading="lazy"
             className="w-full max-w-[1000px] lg:max-w-[1100px] object-contain"
+          />
+        </div>
+
+        {/* Small/medium screens: 3 individual cards stacked */}
+        <div className="flex lg:hidden flex-col items-center gap-6 mt-12">
+          <img
+            src={Card1}
+            alt="Technology & Digital Skills"
+            loading="lazy"
+            className="w-full max-w-[280px] object-contain"
+          />
+          <img
+            src={Card2}
+            alt="Artisanal & Trade Skills"
+            loading="lazy"
+            className="w-full max-w-[280px] object-contain"
+          />
+          <img
+            src={Card3}
+            alt="Industrial & Engineering Skills"
+            loading="lazy"
+            className="w-full max-w-[280px] object-contain"
           />
         </div>
       </div>
