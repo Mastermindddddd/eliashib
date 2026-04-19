@@ -29,9 +29,7 @@ const ServicesPage = () => {
             <div className="flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
               <div className="h-px w-10 sm:w-16 md:w-24 lg:w-28 bg-white/20" />
               <h1 className="text-center text-[1.5rem] sm:text-[1.9rem] md:text-[2.3rem] lg:text-[2.7rem] xl:text-[3rem] font-poppins font-extrabold uppercase leading-[1.1] tracking-[-0.02em]">
-                Courses Page
-                <br />
-                (Updated With Credibility)
+                Courses
               </h1>
               <div className="h-px w-10 sm:w-16 md:w-24 lg:w-28 bg-white/20" />
             </div>

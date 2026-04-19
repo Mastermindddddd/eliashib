@@ -54,7 +54,7 @@ const IndustrialTraining = () => {
               src={IndustrialPerson}
               alt="Industry-aligned training"
               className="
-                absolute bottom-0 left-1/2 -translate-x-[60%]
+                absolute bottom-0 left-1/2 -translate-x-[68%] md:-translate-x-[72%] lg:-translate-x-[75%]
                 w-[560px]
                 sm:w-[680px]
                 md:w-[860px]
@@ -67,31 +67,30 @@ const IndustrialTraining = () => {
           </div>
 
           {/* Right content */}
-          <div className="relative z-10 max-w-[520px] md:ml-auto pb-8 lg:pb-20">
-            <h3 className="text-[2.5rem] sm:text-[3rem] lg:text-[3.55rem] font-extrabold uppercase leading-[1.06] tracking-[-0.03em]">
-              Industry-Aligned
-              <br />
-              Training
-            </h3>
+          <div className="relative z-10 max-w-[460px] md:ml-auto lg:ml-8 xl:ml-12 pr-2 sm:pr-4 lg:pr-0 pb-8 lg:pb-20">
+  <h3 className="text-[2.3rem] sm:text-[2.8rem] lg:text-[3rem] font-extrabold uppercase leading-[1.05] tracking-[-0.02em]">
+  <span className="whitespace-nowrap">INDUSTRY-ALIGNED</span> <br />
+  TRAINING
+</h3>
 
-            <div className="mt-10 text-white/78 text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.45]">
-              <p className="mb-2">Our programmes are aligned with:</p>
-              <ul className="list-disc pl-5 space-y-1.5">
-                <li>National qualification frameworks</li>
-                <li>Industry standards</li>
-                <li>Employer requirements</li>
-              </ul>
-            </div>
+  <div className="mt-6 text-white/78 text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.45]">
+    <p className="mb-2">Our programmes are aligned with:</p>
+    <ul className="list-disc pl-5 space-y-1.5">
+      <li>National qualification frameworks</li>
+      <li>Industry standards</li>
+      <li>Employer requirements</li>
+    </ul>
+  </div>
 
-            <div className="mt-9 text-white/78 text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.45]">
-              <p className="mb-2">We prepare learners for:</p>
-              <ul className="list-disc pl-5 space-y-1.5">
-                <li>Employment opportunities</li>
-                <li>Apprenticeships &amp; learnerships</li>
-                <li>Business and self-employment</li>
-              </ul>
-            </div>
-          </div>
+  <div className="mt-7 text-white/78 text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.45]">
+    <p className="mb-2">We prepare learners for:</p>
+    <ul className="list-disc pl-5 space-y-1.5">
+      <li>Employment opportunities</li>
+      <li>Apprenticeships &amp; learnerships</li>
+      <li>Business and self-employment</li>
+    </ul>
+  </div>
+</div>
         </div>
       </div>
 

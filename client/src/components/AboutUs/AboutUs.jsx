@@ -16,12 +16,12 @@ const AboutUs = () => {
               src={AboutImg}
               loading="lazy"
               alt="About us"
-              className="w-[360px] sm:w-[420px] md:w-[460px] lg:w-[800px] object-contain ml-20"
+              className="block w-[360px] sm:w-[420px] md:w-[460px] lg:w-[800px] object-contain ml-20"
             />
           </div>
 
           {/* Right Content */}
-          <div className="text-white max-w-[560px] pb-16">
+          <div className="text-white max-w-[560px]">
             <h2 className="font-poppins text-3xl sm:text-4xl lg:text-4xl font-extrabold uppercase leading-tight tracking-tight">
               Recognised. Accredited.
               <br />

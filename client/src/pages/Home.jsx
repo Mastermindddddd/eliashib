@@ -13,7 +13,7 @@ const Home = () => {
       <section id="about" className="pt-18">
         <AboutUs />
       </section>
-      <section id="services" className="pt-18">
+      <section id="services" className="lg:-mt-20 xl:-mt-36 relative z-10">
         <Services />
       </section>
       <section id="contact" className="pt-18">
